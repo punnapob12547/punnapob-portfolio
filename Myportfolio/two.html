@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Development Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: #beff45;
+            color: black;
+            /* ลายตาราง Background */
+            background-image: linear-gradient(black 1px, transparent 1px),
+            linear-gradient(90deg, black 1px, transparent 1px);
+            background-size: 40px 40px;
+            background-position: center top;
+        }
+
+        /* Project Card */
+        .project-card {
+            background: white;
+            border: 4px solid black;
+            box-shadow: 10px 10px 0px 0px black;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .project-card:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 14px 14px 0px 0px black;
+        }
+
+        /* Image Wrapper */
+        .card-image-wrapper {
+            border-bottom: 4px solid black;
+            height: 250px;
+            overflow: hidden;
+            background-color: #eee;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .project-card:hover .card-image {
+            transform: scale(1.1);
+        }
+
+        /* Tech Badges */
+        .tech-badge {
+            background-color: black;
+            color: #beff45;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            font-weight: bold;
+            border-radius: 99px;
+        }
+
+        /* Button Style */
+        .nav-btn {
+            background: white;
+            border: 3px solid black;
+            box-shadow: 4px 4px 0px black;
+            font-weight: bold;
+            transition: all 0.1s;
+        }
+        
+        .nav-btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px black;
+        }
+
+        .next-btn {
+            background: black;
+            color: #beff45;
+            border: 3px solid white; 
+            /* White border to pop on black bg/shadow */
+            outline: 3px solid black; 
+        }
+        
+        .next-btn:hover {
+            background: #333;
+        }
+
+        /* Bullet Points */
+        ul.custom-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul.custom-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        ul.custom-list li::before {
+            content: "➤";
+            position: absolute;
+            left: 0;
+            color: black;
+            font-size: 0.8rem;
+            top: 2px;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 md:p-8">
+
+    <!-- Header & Navigation -->
+    <div class="max-w-7xl mx-auto mb-10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <a href="index.html" class="nav-btn px-6 py-3 flex items-center gap-2 no-underline text-black">
+            <i data-lucide="home"></i> กลับหน้าหลัก
+        </a>
+        
+        <div class="text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold uppercase bg-white px-6 py-2 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] -rotate-1">
+                Software Projects
+            </h1>
+        </div>
+
+        <a href="three.html" class="nav-btn next-btn px-6 py-3 flex items-center gap-2 no-underline">
+            รางวัลและกิจกรรม <i data-lucide="arrow-right"></i>
+        </a>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-12">
+
+        <!-- 1. Boy Soccer Academy -->
+        <article class="project-card">
+            <div class="card-image-wrapper">
+                <img src="images/5.png" alt="Boy Soccer Academy" class="card-image" onerror="this.src='https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=500&q=80'">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+                <span class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">External Project</span>
+                <h2 class="text-2xl font-bold mb-2 leading-tight">Boy Soccer Academy Evaluation System</h2>
+                <h3 class="text-lg font-semibold mb-3">ระบบประเมินและติดตามทักษะนักฟุตบอล</h3>
+                
+                <p class="text-sm text-gray-700 mb-4 flex-grow">
+                    ระบบประเมินศักยภาพนักกีฬาแบบ Hybrid (End-to-End) ใช้ AppSheet เก็บข้อมูลสนามและ React แสดงผลกราฟ Radar Chart พร้อมออกรายงาน A4 อัตโนมัติ
+                </p>
+
+                <div class="mb-4 bg-gray-100 p-3 border-2 border-black">
+                    <h4 class="font-bold text-sm mb-2 border-b-2 border-black inline-block">Key Features</h4>
+                    <ul class="custom-list">
+                        <li>Hybrid Data Collection (AppSheet)</li>
+                        <li>Dynamic CSV Processing (Radar Chart)</li>
+                        <li>Automated Reporting (PDF Ready)</li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap gap-2 mt-auto">
+                    <span class="tech-badge">React (Vite)</span>
+                    <span class="tech-badge">TypeScript</span>
+                    <span class="tech-badge">AppSheet</span>
+                    <span class="tech-badge">Recharts</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- 2. University Accident Notification -->
+        <article class="project-card">
+            <div class="card-image-wrapper">
+                <img src="images/6.png" alt="Accident Notification" class="card-image" onerror="this.src='https://images.unsplash.com/photo-1599700403969-f77b37d63841?w=500&q=80'">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+                <span class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">Academic Project</span>
+                <h2 class="text-2xl font-bold mb-2 leading-tight">University Accident Notification System</h2>
+                <h3 class="text-lg font-semibold mb-3">ระบบแจ้งเตือนอุบัติเหตุภายในมหาวิทยาลัย</h3>
+                
+                <p class="text-sm text-gray-700 mb-4 flex-grow">
+                    Web Application ต้นแบบช่วยลดเวลาประสานงานกู้ภัย เก็บข้อมูลวิเคราะห์จุดเสี่ยง ระบุพิกัดและอาการบาดเจ็บได้ทันที
+                </p>
+
+                <div class="mb-4 bg-gray-100 p-3 border-2 border-black">
+                    <h4 class="font-bold text-sm mb-2 border-b-2 border-black inline-block">Key Features</h4>
+                    <ul class="custom-list">
+                        <li>แจ้งเหตุระบุสถานที่เกิดเหตุ</li>
+                        <li>ระบุอาการบาดเจ็บเบื้องต้น</li>
+                        <li>Dashboard วิเคราะห์จุดเสี่ยง</li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap gap-2 mt-auto">
+                    <span class="tech-badge">PHP</span>
+                    <span class="tech-badge">MySQL</span>
+                    <span class="tech-badge">HTML5/CSS3</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- 3. University Parking Registration -->
+        <article class="project-card">
+            <div class="card-image-wrapper">
+                <img src="images/7.png" alt="Parking System" class="card-image" onerror="this.src='https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=500&q=80'">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+                <span class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">Academic Project</span>
+                <h2 class="text-2xl font-bold mb-2 leading-tight">University Parking Registration System</h2>
+                <h3 class="text-lg font-semibold mb-3">ระบบลงทะเบียนและตรวจสอบสิทธิ์จอดรถ</h3>
+                
+                <p class="text-sm text-gray-700 mb-4 flex-grow">
+                    ระบบบริหารจัดการข้อมูลยานพาหนะ คัดกรองรถเข้า-ออก และตรวจสอบสิทธิ์จอดรถผ่านเว็บแอปพลิเคชัน
+                </p>
+
+                <div class="mb-4 bg-gray-100 p-3 border-2 border-black">
+                    <h4 class="font-bold text-sm mb-2 border-b-2 border-black inline-block">Key Features</h4>
+                    <ul class="custom-list">
+                        <li>Role-Based Access (Admin/User)</li>
+                        <li>Data Management (ประวัติเข้า-ออก)</li>
+                        <li>ตรวจสอบป้ายทะเบียน</li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap gap-2 mt-auto">
+                    <span class="tech-badge">PHP</span>
+                    <span class="tech-badge">MySQL</span>
+                    <span class="tech-badge">JavaScript</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- 4. AR Computer Hardware -->
+        <article class="project-card">
+            <div class="card-image-wrapper">
+                <img src="images/8.png" alt="AR Hardware" class="card-image" onerror="this.src='https://images.unsplash.com/photo-1633126780775-6825c34cb38d?w=500&q=80'">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+                <span class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">Academic Project</span>
+                <h2 class="text-2xl font-bold mb-2 leading-tight">AR Computer Hardware Learning Cards</h2>
+                <h3 class="text-lg font-semibold mb-3">สื่อการเรียนรู้ AR อุปกรณ์คอมพิวเตอร์</h3>
+                
+                <p class="text-sm text-gray-700 mb-4 flex-grow">
+                    Prototype สื่อการสอนใช้ AR ผ่านกล้องเว็บแคม แสดงโมเดล 3 มิติของอุปกรณ์คอมพิวเตอร์เมื่อส่องที่การ์ด
+                </p>
+
+                <div class="mb-4 bg-gray-100 p-3 border-2 border-black">
+                    <h4 class="font-bold text-sm mb-2 border-b-2 border-black inline-block">Key Features</h4>
+                    <ul class="custom-list">
+                        <li>แสดงโมเดล 3D ผ่าน AR</li>
+                        <li>ใช้ Marker Card ควบคุม</li>
+                        <li>Interactive Learning</li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap gap-2 mt-auto">
+                    <span class="tech-badge">Unity</span>
+                    <span class="tech-badge">Augmented Reality</span>
+                    <span class="tech-badge">3D Modeling</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- 5. Network Infrastructure Design -->
+        <article class="project-card">
+            <div class="card-image-wrapper">
+                <img src="images/9.png" alt="Network Design" class="card-image" onerror="this.src='https://images.unsplash.com/photo-1544197150-b99a580bbc7c?w=500&q=80'">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+                <span class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">Academic Project</span>
+                <h2 class="text-2xl font-bold mb-2 leading-tight">University Network Infrastructure Design</h2>
+                <h3 class="text-lg font-semibold mb-3">ออกแบบระบบเครือข่าย อาคารเรียน ชั่น1</h3>
+                
+                <p class="text-sm text-gray-700 mb-4 flex-grow">
+                    โครงการสำรวจออกแบบและปรับปรุงระบบเครือข่าย อาคารชั้น 1 เพื่อวิเคราะห์ปัญหาจุดอับสัญญาณและอุปกรณ์เสื่อมสภาพ
+                </p>
+
+                <div class="mb-4 bg-gray-100 p-3 border-2 border-black">
+                    <h4 class="font-bold text-sm mb-2 border-b-2 border-black inline-block">Key Features</h4>
+                    <ul class="custom-list">
+                        <li>วิเคราะห์ปัญหาเครือข่ายเดิม</li>
+                        <li>ประเมินงบประมาณอุปกรณ์</li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap gap-2 mt-auto">
+                    <span class="tech-badge">Network Design</span>
+                    <span class="tech-badge">Cisco Packet Tracer</span>
+                    <span class="tech-badge">Cost Analysis</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- 6. RSA Algorithm Optimization -->
+        <article class="project-card">
+            <div class="card-image-wrapper">
+                <img src="images/10.png" alt="RSA Algorithm" class="card-image" onerror="this.src='https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500&q=80'">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+                <span class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">Academic Project</span>
+                <h2 class="text-2xl font-bold mb-2 leading-tight">RSA Algorithm Performance Optimization</h2>
+                <h3 class="text-lg font-semibold mb-3">การปรับปรุงประสิทธิภาพอัลกอริทึม RSA</h3>
+                
+                <p class="text-sm text-gray-700 mb-4 flex-grow">
+                    วิเคราะห์และแก้ไขคอขวด (Bottleneck) ของโค้ด RSA ต้นฉบับ เพิ่มความเร็วการเข้ารหัสด้วย Python
+                </p>
+
+                <div class="mb-4 bg-gray-100 p-3 border-2 border-black">
+                    <h4 class="font-bold text-sm mb-2 border-b-2 border-black inline-block">Key Features</h4>
+                    <ul class="custom-list">
+                        <li>แก้ปัญหา Modular Exponentiation</li>
+                        <li>ใช้ Parallel Processing</li>
+                        <li>Benchmark เทียบความเร็ว</li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap gap-2 mt-auto">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Algorithm</span>
+                    <span class="tech-badge">Cryptography</span>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+    <!-- Bottom Navigation (Mobile) -->
+    <div class="flex justify-center mb-8 md:hidden">
+         <a href="three.html" class="nav-btn next-btn w-full text-center px-6 py-4 text-xl no-underline">
+            ไปดูรางวัลและกิจกรรม <i data-lucide="arrow-right" class="inline ml-2"></i>
+        </a>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

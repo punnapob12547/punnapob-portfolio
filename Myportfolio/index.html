@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- เชื่อมต่อไฟล์ CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex flex-col items-center justify-center relative">
+
+    <!-- Navigation Menu -->
+    <div class="nav-container">
+        <div class="nav-menu">
+            <div class="logo-text">MY PORTFOLIO</div>
+            <div class="flex gap-2">
+                <a href="one.html" class="nav-item">ประวัติ</a>
+                <a href="two.html" class="nav-item">โปรเจค</a>
+                <a href="three.html" class="nav-item">รางวัลและกิจกรรม</a>
+                <a href="four.html" class="nav-item">ติดต่อ</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Marquee -->
+    <div class="marquee-wrapper">
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <span class="marquee-item">PUNNAPOB</span>
+                <span class="marquee-item">ROONGWATTANAPAK</span>
+                <span class="marquee-item">PUNNAPOB</span>
+                <span class="marquee-item">ROONGWATTANAPAK</span>
+                <span class="marquee-item">PUNNAPOB</span>
+                <span class="marquee-item">ROONGWATTANAPAK</span>
+            </div>
+            <div class="marquee-content">
+                <span class="marquee-item">PUNNAPOB</span>
+                <span class="marquee-item">ROONGWATTANAPAK</span>
+                <span class="marquee-item">PUNNAPOB</span>
+                <span class="marquee-item">ROONGWATTANAPAK</span>
+                <span class="marquee-item">PUNNAPOB</span>
+                <span class="marquee-item">ROONGWATTANAPAK</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex flex-col items-center justify-center z-10 space-y-10 mt-10">
+        <div class="profile-image-container">
+            <img 
+                src="images/me.png" 
+                alt="Profile Picture" 
+                class="profile-image"
+                onerror="this.src='https://api.dicebear.com/7.x/avataaars/svg?seed=Felix'"
+            >
+        </div>
+
+        <a href="one.html" class="cta-button px-10 py-4 text-2xl font-bold rounded-full flex items-center gap-3 cursor-pointer no-underline">
+            <span>เข้าชมพอร์ตฟอลิโอ</span>
+            <i data-lucide="arrow-right" class="w-6 h-6"></i>
+        </a>
+    </div>
+
+    <div class="bottom-shadow"></div>
+
+    <!-- เชื่อมต่อไฟล์ JS -->
+    <script src="script.js"></script>
+</body>
+</html>

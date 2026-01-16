@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Summary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: #beff45;
+            color: black;
+            /* Grid Background */
+            background-image: 
+                linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container-box {
+            max-width: 900px;
+            width: 100%;
+            padding: 2rem;
+        }
+
+        /* Brutalist Card Styles */
+        .contact-card {
+            background: white;
+            border: 4px solid black;
+            box-shadow: 10px 10px 0px black;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .message-card {
+            background: black;
+            color: #beff45;
+            border: 4px solid white;
+            box-shadow: 10px 10px 0px rgba(0,0,0,0.5); /* Soft shadow for contrast */
+            padding: 2rem;
+            margin-bottom: 3rem;
+            transform: rotate(-1deg);
+        }
+
+        /* List Items */
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 0.5rem;
+            transition: background 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+
+        .contact-item:hover {
+            background-color: #f0f0f0;
+            border-bottom: 2px solid black;
+        }
+
+        .icon-box {
+            background: black;
+            color: white;
+            padding: 0.5rem;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Links */
+        a.link-hover {
+            text-decoration: none;
+            color: black;
+            border-bottom: 1px solid black;
+        }
+        a.link-hover:hover {
+            background-color: #beff45;
+        }
+
+        /* Back Button */
+        .home-btn {
+            background: white;
+            border: 3px solid black;
+            box-shadow: 6px 6px 0px black;
+            font-size: 1.5rem;
+            font-weight: 800;
+            padding: 1rem 3rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.1s;
+            text-transform: uppercase;
+        }
+
+        .home-btn:active {
+            transform: translate(3px, 3px);
+            box-shadow: 3px 3px 0px black;
+        }
+
+        .home-btn:hover {
+            background-color: #beff45;
+        }
+
+        /* Decorative Elements */
+        .corner-decoration {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: #beff45;
+            border: 3px solid black;
+            padding: 0.25rem 1rem;
+            font-weight: bold;
+            transform: rotate(5deg);
+        }
+    </style>
+</head>
+<body class="p-4">
+
+    <div class="container-box">
+        
+        <!-- Header -->
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-8 text-center uppercase tracking-tight">
+            ช่องทางติดต่อ <span class="text-white text-stroke-black block md:inline">(Contact)</span>
+        </h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+            
+            <!-- Left Column: Contact Info -->
+            <div class="contact-card">
+                <div class="corner-decoration">Let's Talk!</div>
+                
+                <div class="space-y-4">
+                    <!-- Phone -->
+                    <div class="contact-item">
+                        <div class="icon-box"><i data-lucide="phone"></i></div>
+                        <a href="tel:0809973812" class="link-hover">080-997-3812</a>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="contact-item">
+                        <div class="icon-box"><i data-lucide="mail"></i></div>
+                        <a href="mailto:Punnapobcaptain@gmail.com" class="link-hover text-base md:text-lg">Punnapobcaptain@gmail.com</a>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="contact-item">
+                        <div class="icon-box"><i data-lucide="map-pin"></i></div>
+                        <span>สมุทรปราการ (Samut Prakan)</span>
+                    </div>
+
+                    <!-- Line -->
+                    <div class="contact-item">
+                        <div class="icon-box" style="background-color: #06C755;"><i data-lucide="message-circle"></i></div>
+                        <span>ID: 122547122547</span>
+                    </div>
+
+                    <!-- Github -->
+                    <div class="mt-6 pt-4 border-t-4 border-black border-dashed">
+                        <div class="flex items-center gap-2 mb-3 font-bold">
+                            <i data-lucide="github" class="w-6 h-6"></i> GITHUB REPOSITORIES
+                        </div>
+                        <ul class="space-y-2 pl-2">
+                            <li>
+                                <span class="font-bold mr-2">1.</span>
+                                <a href="https://github.com/punnapob12547" target="_blank" class="link-hover break-all">github.com/punnapob122547</a>
+                            </li>
+                            <li>
+                                <span class="font-bold mr-2">2.</span>
+                                <a href="https://github.com/punnapobCT12" target="_blank" class="link-hover break-all">github.com/punnapobCT12</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Closing Message -->
+            <div class="flex flex-col justify-center">
+                <div class="message-card relative">
+                    <i data-lucide="quote" class="absolute -top-6 -left-4 w-12 h-12 text-[#beff45] bg-black border-2 border-white rounded-full p-2"></i>
+                    
+                    <h2 class="text-2xl font-bold mb-4 uppercase border-b-2 border-[#beff45] inline-block pb-1">Thank You</h2>
+                    
+                    <p class="text-lg leading-relaxed mb-4 font-light">
+                        "ขอบคุณที่เข้าชมเว็บไซต์พอร์ตโฟลิโอนี้"
+                    </p>
+                    
+                    <p class="text-lg leading-relaxed mb-4">
+                        ผมเชื่อว่า<span class="font-bold text-white bg-gray-800 px-1">ซอฟต์แวร์ที่ดีไม่ได้จบแค่การใช้งานได้</span> แต่ควรสามารถพัฒนาและปรับปรุงให้มีประสิทธิภาพยิ่งขึ้นได้อย่างต่อเนื่อง
+                    </p>
+                    
+                    <p class="text-lg leading-relaxed font-light opacity-90">
+                        เว็บไซต์นี้เป็นส่วนหนึ่งของเส้นทางการเรียนรู้ และยังเปิดกว้างสำหรับการพัฒนาต่อไปในอนาคต
+                    </p>
+
+                    <div class="mt-6 text-right">
+                        <span class="font-signature text-xl italic">(•̀ᴗ•́)و</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Back to Home Button -->
+        <div class="text-center mt-8">
+            <a href="index.html" class="home-btn">
+                <i data-lucide="home"></i> กลับหน้าหลัก
+            </a>
+        </div>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
