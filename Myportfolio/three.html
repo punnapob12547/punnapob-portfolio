@@ -104,17 +104,7 @@
     </style>
 </head>
 <body class="min-h-screen p-4 md:p-8">
-
-    <!-- Top Navigation -->
-    <div class="content-container flex justify-between items-center mb-8">
-        <a href="index.html" class="nav-btn">
-            <i data-lucide="home" class="w-5 h-5"></i> หน้าหลัก
-        </a>
-        <a href="four.html" class="nav-btn primary">
-            ช่องทางติดต่อ <i data-lucide="arrow-right" class="w-5 h-5"></i>
-        </a>
-    </div>
-
+    
     <div class="content-container">
         
         <!-- SECTION: AWARDS -->
@@ -210,12 +200,22 @@
             </div>
         </div>
         
-        <!-- Bottom Nav (Mobile Friendly) -->
-        <div class="mt-8 flex justify-center md:hidden">
-            <a href="four.html" class="nav-btn primary w-full justify-center">
-                ไปหน้าช่องทางติดต่อ <i data-lucide="arrow-right"></i>
-            </a>
-        </div>
+        <div class="content-container flex flex-col md:flex-row justify-between items-center gap-4 mb-8 mt-12">
+    <!-- ซ้าย: ย้อนกลับไปหน้าโปรเจกต์ (two.html) -->
+    <a href="two.html" class="nav-btn">
+        <i data-lucide="arrow-left" class="w-5 h-5"></i> ย้อนกลับ
+    </a>
+
+    <!-- กลาง: กลับหน้าหลัก -->
+    <a href="index.html" class="nav-btn">
+        <i data-lucide="home" class="w-5 h-5"></i> หน้าหลัก
+    </a>
+
+    <!-- ขวา: ไปหน้าติดต่อ -->
+    <a href="four.html" class="nav-btn primary">
+        ช่องทางติดต่อ <i data-lucide="arrow-right" class="w-5 h-5"></i>
+    </a>
+</div>
 
     </div>
 
@@ -223,4 +223,5 @@
         lucide.createIcons();
     </script>
 </body>
+
 </html>
